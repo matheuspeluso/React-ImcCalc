@@ -1,4 +1,5 @@
 import "../components/ImcCalc.css"
+import Button from "./Button.jsx"
 
 const imcCalc = () => {
     return (
@@ -6,7 +7,7 @@ const imcCalc = () => {
             <h2>Calculadora de IMC</h2>
             <form id="imc-form">
                 <div className="form-inputs">
-                    <div className="form-controls">
+                    <div className="form-control">
                         <label htmlFor="height">Altura:</label>
                         <input 
                         type="text" 
@@ -15,7 +16,7 @@ const imcCalc = () => {
                         placeholder="Ex 1,75"
                         />
                     </div>
-                    <div className="form-controls">
+                    <div className="form-control">
                         <label htmlFor="weight">Peso:</label>
                         <input 
                         type="text" 
@@ -27,8 +28,8 @@ const imcCalc = () => {
                 </div>
 
                 <div className="action-control">
-                    <button>Calcular</button>
-                    <button>Limpar</button>
+                    <Button id="calc-btn" text="Calcular"/>
+                    <Button id="clear-btn" text="Limpar"/>
                 </div>
             </form>
         </div>

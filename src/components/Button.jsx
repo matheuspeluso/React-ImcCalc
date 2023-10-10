@@ -2,9 +2,14 @@ import "../components/Button.css"
 
 import React from 'react'
 
-const button = ({id,text}) => {
+const button = ({id,text,action}) => {
+
+  const handleAtcion = (e)=>{ //deixando mais generico ainda fazendo com que o botão possa receber varias funções diferents
+    action(e);
+  }
+
   return (
-    <button id={id}>{text}</button>
+    <button id={id} onClick={handleAtcion}>  {text}</button>
   )
 }
 

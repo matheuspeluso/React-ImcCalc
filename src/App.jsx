@@ -12,6 +12,16 @@ function App() {
   const calcImc = (e, height, weight) =>{
     e.preventDefault();
     console.log("Executou!")
+
+    console.log(height,weight)
+    if (!height || !weight)return;
+
+    const weightFloat = +weight.replace(",", ".");
+    const heightFloat = +height.replace(",", ".");
+
+    const imcResult = (weightFloat / (heightFloat * heightFloat)).toFixed(1)
+    setImc(imcResult);
+    
   }
 
   const [imc,setImc] = useState("");

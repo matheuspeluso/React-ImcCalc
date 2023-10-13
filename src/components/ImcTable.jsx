@@ -2,7 +2,7 @@ import React from 'react'
 import Button from "./Button.jsx"
 import "../components/ImcTable.css"
 
-const ImcTable = ({data, imc, info, infoClass}) => {
+const ImcTable = ({data, imc, info, infoClass, resetCalc}) => {
   return (
     <div id='result-container'>
       <p id="imc-number">Seu Imc: <span className={infoClass}>{imc}</span></p>
@@ -21,7 +21,7 @@ const ImcTable = ({data, imc, info, infoClass}) => {
               <p>{item.obesity}</p>
             </div>
           ))}
-        <Button id={"back-btn"} text={"Voltar"}/>
+        <Button id={"back-btn"} text={"Voltar"} action={resetCalc}/>
       </div>
     </div>
   )
